@@ -1,0 +1,20 @@
+﻿#tableauContact {
+    border-radius: 5%;
+    border-color: black;
+    text-align: center;
+}
+
+#TableData {
+	background-color: rgb(167,167,167);
+}
+
+td, th, tr {
+	box-shadow: -1px -1px -1px -1px black inset;
+	box-shadow: -1px -1px 1px 1px black inset;
+	text-align: center;
+	font-weight: bold;
+}
+
+#tableauLogin {
+	display: none;
+}

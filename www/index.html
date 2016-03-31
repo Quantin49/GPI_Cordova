@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jqueryCSS.css">
+    <!-- <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.5/theme-classic/theme-classic.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/monCSS.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/ModeleClassicB.css"> -->
+    <title>Hello World</title>
+</head>
+<body>
+
+    <div data-role="page" data-theme="b" id="page1">
+      <div data-role="header">
+        <h1>Connexion</h1>
+        <a href="#page2" id="pageAjout" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Ajouter</a>
+        <a href="#page3" id="pageListe" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Lister BDD</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <form>
+            <h3>Identification</h3>
+            <label for="loginSignIn" class="ui-hidden-accessible">Login:</label>
+            <input id="loginSignIn" type="text" placeholder="username" data-theme="a">
+
+            <label for="pwdSignIn" class="ui-hidden-accessible">Password:</label>
+            <input id="pwdSignIn" type="password" placeholder="password" data-theme="a">
+
+            <button id="btnLogin" type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Log In</button>
+        </form>
+    </div>
+
+
+<div data-role="footer">
+    <h1>Footer Text</h1>
+</div>
+</div>
+
+<div data-role="page" data-theme="b" id="page2">
+  <div data-role="header">
+    <h1>Ajout</h1>
+    <a href="#page1" id="pageAccueil" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Accueil</a>
+    <a href="#page3" id="pageListe" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Lister BDD</a>
+</div>
+
+<div data-role="main" class="ui-content">
+    <div id="formulaire">
+     <label for="nom">Nom:</label>
+     <input id="nom" type="text" name="text-basic" id="text-basic" placeholder="Votre Nom">
+     <label for="prenom">Prenom:</label>
+     <input id="prenom" type="text" name="text-basic" id="text-basic" placeholder="Votre Prenom">
+     <label for="age">Age:</label>
+     <input id="age" type="number" name="number" pattern="[0-9]*">
+     <label for="login">Login:</label>
+     <input id="login" type="text" name="text-basic" id="text-basic" placeholder="Votre Login">
+     <label for="password">Password:</label>
+     <input id="password" type="password" name="password"  value="" autocomplete="off" placeholder="Votre Password">
+     <button id="btnAjouter" class="ui-shadow ui-btn ui-corner-all">Ajouter</button>
+ </div>
+</div>
+
+<div data-role="footer">
+    <h1>Footer Text</h1>
+</div>
+</div>
+
+<div data-role="page" data-theme="b" id="page3">
+  <div data-role="header">
+    <h1>Consultation</h1>
+    <a href="#page1" id="pageAccueil" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Accueil</a>
+    <a href="#page3" id="pageListeReload" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Recharger Page</a>
+</div>
+
+<div data-role="main" class="ui-content">
+    <!-- tableau contact -->
+    <div class="col-sm-12">
+        <table id="tableauContact" border="4px" class="border table table-bordered table-hover table-condensed table-responsive" data-theme="b">
+            <thead>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+            </thead>
+            <tbody id='TableData'>
+            </tbody>
+        </table>
+    </div>
+    <div id="formulaireSuppression">
+     <label for="idBdd">Entrer ID a retirer:</label>
+     <input id="idBdd" type="number" name="number" pattern="[0-9]*">
+     <button id="btnSupprimer" class="ui-shadow ui-btn ui-corner-all">Supprimer</button>
+    </div>
+ </div>
+
+ <div data-role="footer">
+    <h1>Footer Text</h1>
+</div>
+</div>
+
+<div data-role="page" data-theme="b" id="page4">
+  <div data-role="header">
+    <h1>Admin</h1>
+    <button id="btnDeconnexion" type="submit" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Deconnexion</button>
+    <!-- <a href="#page1" id="btnDeconnexion" class="ui-btn ui-mini" data-icon="check" data-iconpos="right">Deconnexion</a> -->
+</div>
+
+<div data-role="main" class="ui-content">
+    <!-- tableau contact -->
+    <p>Section 1.10.33 du "De Finibus Bonorum et Malorum" de Ciceron (45 av. J.-C.)
+
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."
+    </p>
+    <div class="col-sm-12">
+        <table id="tableauLogin" border="4px" class="border table table-bordered table-hover table-condensed table-responsive" data-theme="b">
+            <tbody id='tableLogin'>
+            </tbody>
+        </table>
+    </div>
+ </div>
+
+ <div data-role="footer">
+    <h1>Footer Text</h1>
+</div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/monjs.js"></script>
+</body>
+</html>
